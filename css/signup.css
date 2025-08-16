@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #00a8ff;
+    --section-bg-dark: #191c24;
+    --sidebar-bg: #13151a;
+    --card-bg-dark: rgba(255, 255, 255, 0.05);
+    --glow-color: rgba(0, 168, 255, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--section-bg-dark);
+    color: #ecf0f1;
+    line-height: 1.6;
+}
+
+.signup-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Info Panel */
+.info-panel {
+    width: 50%;
+    background-color: var(--sidebar-bg);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-content .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.info-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.info-content > p {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 3rem;
+}
+
+.plan-card {
+    background: var(--card-bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.plan-card.pro {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 50px;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.plan-header h3 {
+    font-size: 1.2rem;
+}
+
+.plan-header .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.plan-header .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.plan-card ul {
+    list-style: none;
+}
+
+.plan-card ul li {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.plan-card ul li i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+/* Right Signup Panel */
+.signup-panel {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.signup-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.signup-content .subtitle {
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    gap: 0.8rem;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+.social-btn svg {
+    height: 20px;
+    width: 20px;
+}
+
+.social-btn.facebook { background-color: #1877F2; }
+.social-btn.google { background-color: #ffffff; color: #333; }
+.social-btn.naver { background-color: #03C75A; }
+.social-btn.naver .naver-icon path:nth-child(3) { fill: #03C75A; }
+.social-btn.naver .naver-icon path:not(:nth-child(3)) { fill: #FFFFFF; }
+.social-btn.kakao { background-color: #FEE500; color: #191919; }
+.social-btn.kakao .kakao-icon path { fill: #191919; }
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    color: #aaa;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.divider:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .5em;
+}
+
+form .input-group {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.cta-button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.02);
+}
+
+.terms {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.terms a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .signup-container {
+        flex-direction: column;
+    }
+    .info-panel, .signup-panel {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .info-panel {
+        padding: 2rem;
+    }
+}

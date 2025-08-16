@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artify - Your Creative Marketplace</title>
+    <!-- Font Awesome for play/pause icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <a href="#" class="logo" data-target="main-page">Artify</a>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a data-target="music-browser">
+                        <i class="fas fa-music"></i>
+                        <span>음악</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">J-Pop</a></li>
+                        <li><a href="#">Pop</a></li>
+                        <li><a href="#">Lo-fi</a></li>
+                        <li><a href="#">Cinematic</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a data-target="photos-browser">
+                        <i class="fas fa-image"></i>
+                        <span>이미지</span>
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">풍경</a></li>
+                        <li><a href="#">사람</a></li>
+                        <li><a href="#">도시</a></li>
+                        <li><a href="#">자연</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="page-content">
+        <header>
+            <nav>
+                <!-- Logged Out State -->
+                <div class="nav-center" id="nav-logged-out-center">
+                    <a href="signup.html" class="cta-button">Start free now!</a>
+                </div>
+                <div class="nav-right" id="nav-logged-out-right">
+                    <a href="signup.html" class="nav-button">가격</a>
+                    <button class="signup signup-trigger">회원가입</button>
+                </div>
+
+                <!-- Logged In State (Hidden by default) -->
+                <div class="nav-right hidden" id="nav-logged-in">
+                    <div class="credit-display">
+                        <i class="fas fa-coins"></i>
+                        <span id="credit-count">0</span> Credits
+                    </div>
+                    <div class="profile-display">
+                        <span id="user-email"></span>
+                        <button id="logout-btn" class="nav-button">로그아웃</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Main Page Content Wrapper -->
+            <div id="main-page-content" class="active">
+                <section id="hero" class="main-section hero-sliding">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1>당신의 창의력을 위한 마켓플레이스</h1>
+                            <p>독점 음원과 고품질 사진을 만나보세요.</p>
+                            <input type="text" placeholder="검색어를 입력하세요..." class="search-bar">
+                        </div>
+                    </div>
+                    <div class="sliding-columns">
+                        <div class="column"><img src="https://images.unsplash.com/photo-1511379938547-c1f6ish&ixid=MnwxfDB8MXxyYW5kb218MHx8bXVzaWN8fHx8fHwxNjM4NjY2ODU0&ixlib=rb-1.2.1&q=80&w=1080" alt="Music related image 1"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bXVzaWN8fHx8fHwxNjM4NjY2ODU1&ixlib=rb-1.2.1&q=80&w=1080" alt="Music related image 2"></div>
+                        <div class="column"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaG5vbG9neXx8fHx8fDE2Mzg2NjY4NTY&ixlib=rb-1.2.1&q=80&w=1080" alt="Tech related image 1"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaG5vbG9neXx8fHx8fDE2Mzg2NjY4NTc&ixlib=rb-1.2.1&q=80&w=1080" alt="Tech related image 2"></div>
+                        <div class="column"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlfHx8fHx8fDE2Mzg2NjY4NTg&ixlib=rb-1.2.1&q=80&w=1080" alt="Nature related image 1"><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlfHx8fHx8fDE2Mzg2NjY4NTk&ixlib=rb-1.2.1&q=80&w=1080" alt="Nature related image 2"></div>
+                    </div>
+                </section>
+                
+                <section id="music-grid" class="featured-section featured-music-grid">
+                    <div class="section-title-container">
+                        <h2>당신의 컨텐츠에 생기를 불어넣어 줄 음악</h2>
+                    </div>
+                    <div class="item-grid">
+                        <!-- Music Card 1-6 -->
+                        <div class="music-card">
+                            <div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>自分らしく (나답게)</h3><p>J-Pop</p></div></div>
+                            <div class="waveform-container"><canvas class="waveform"></canvas></div>
+                            <div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div>
+                            <audio crossOrigin="anonymous" src="asset/music/123.wav"></audio>
+                        </div>
+                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Epic Cinematic</h3><p>Orchestral</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
+                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Summer Groove</h3><p>Pop / Funk</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
+                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Night Rider</h3><p>Synthwave</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
+                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Acoustic Peace</h3><p>Folk / Acoustic</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
+                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Future Beats</h3><p>Electronic</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
+                    </div>
+                </section>
+
+                <section id="photos" class="featured-section featured-photos">
+                     <div class="section-title-container">
+                        <h2>당신의 컨텐츠를 더 아름답게 해줄 이미지</h2>
+                    </div>
+                    <div class="photo-marquee">
+                        <div class="photo-column"><img src="https://images.unsplash.com/photo-1534447677768-be436a0976f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Photo"><img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Photo"></div>
+                        <div class="photo-column"><img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Photo"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Photo"></div>
+                    </div>
+                </section>
+                <footer>
+                    <p>&copy; 2025 Artify. All Rights Reserved.</p>
+                </footer>
+            </div>
+
+            <!-- Music Browser Section (Hidden by default) -->
+            <section id="music-browser" class="main-section featured-section featured-music-browser">
+                <div class="music-browser-header">
+                    <div class="filter-group"><button class="filter-btn">Genre <i class="fas fa-chevron-down"></i></button><button class="filter-btn">Mood <i class="fas fa-chevron-down"></i></button><button class="filter-btn">Instrument <i class="fas fa-chevron-down"></i></button></div>
+                    <div class="filter-group"><button class="filter-btn right-align"><i class="fas fa-sliders-h"></i> Filters</button></div>
+                </div>
+                <div class="music-track-list">
+                    <div class="track-item"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-album-art"><img src="https://via.placeholder.com/60/00a8ff/ffffff?text=A" alt="album art"></div><div class="track-details"><h3>自分らしく (나답게)</h3><p>Artify Originals</p></div><div class="track-tags"><span>J-Pop</span></div><div class="track-duration">3:15</div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="track-actions"><button class="action-btn" title="Download"><i class="fas fa-download"></i></button><button class="action-btn" title="Favorite"><i class="far fa-star"></i></button><button class="action-btn" title="Find Similar"><i class="fas fa-wand-magic-sparkles"></i></button><button class="action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button></div><audio crossOrigin="anonymous" src="asset/music/123.wav"></audio></div>
+                    <div class="track-item"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-album-art"><img src="https://via.placeholder.com/60/e74c3c/ffffff?text=B" alt="album art"></div><div class="track-details"><h3>Cosmic Groove</h3><p>FASSounds</p></div><div class="track-tags"><span>Pop</span><span>Electronic</span></div><div class="track-duration">2:21</div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="track-actions"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-star"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button><button class="action-btn"><i class="fas fa-ellipsis-v"></i></button></div><audio crossOrigin="anonymous" src=""></audio></div>
+                </div>
+            </section>
+
+            <!-- Photos Browser Section (Hidden by default) -->
+            <section id="photos-browser" class="main-section featured-section featured-photos-browser">
+                <div class="photo-browser-header">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="풍경, 도시의 밤, 인물 등 검색">
+                    </div>
+                    <div class="filter-group">
+                        <button class="filter-btn">Category <i class="fas fa-chevron-down"></i></button>
+                        <button class="filter-btn">Orientation <i class="fas fa-chevron-down"></i></button>
+                        <button class="filter-btn">Color <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60" alt="A beautiful landscape"><div class="image-overlay"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-heart"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button></div></div>
+                    <div class="grid-item"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60" alt="A beautiful landscape"><div class="image-overlay"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-heart"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button></div></div>
+                    <div class="grid-item"><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&q=60" alt="A beautiful landscape"><div class="image-overlay"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-heart"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button></div></div>
+                    <div class="grid-item"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=60" alt="A beautiful landscape"><div class="image-overlay"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-heart"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button></div></div>
+                    <div class="grid-item"><img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=60" alt="A beautiful landscape"><div class="image-overlay"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-heart"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button></div></div>
+                    <div class="grid-item"><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&q=60" alt="A beautiful landscape"><div class="image-overlay"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-heart"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button></div></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+            <h2>시작하기</h2>
+            <div class="social-login-grid">
+                <button class="social-btn facebook"><svg height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-1.5 C13.67,9,13,9.67,13,10.5V12h3l-0.5,3h-2.5v6.8C18.56,20.87,22,16.84,22,12z" fill="#FFFFFF"/></svg> Facebook</button>
+                <button class="social-btn google"><svg height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56,12.25C22.56,11.42,22.49,10.62,22.35,9.84H12.27V14.4H18.1C17.84,16.02,17.03,17.39,15.82,18.25V21.08H19.8C21.66,19.38,22.56,16.25,22.56,12.25Z" fill="#4285F4"/><path d="M12.27,24C15.3,24,17.84,22.96,19.8,21.08L15.82,18.25C14.7,18.96,13.58,19.35,12.27,19.35C9.55,19.35,7.22,17.59,6.35,15.1H2.24V17.94C4.18,21.63,7.89,24,12.27,24Z" fill="#34A853"/><path d="M6.35,15.1C6.13,14.4,6,13.65,6,12.87C6,12.09,6.13,11.34,6.35,10.63V7.79H2.24C1.46,9.24,1,10.99,1,12.87C1,14.75,1.46,16.5,2.24,17.94L6.35,15.1Z" fill="#FBBC05"/><path d="M12.27,6.48C13.74,6.48,15.03,7,15.91,7.82L19.89,3.94C17.84,2.1,15.3,1,12.27,1C7.89,1,4.18,3.37,2.24,7.79L6.35,10.63C7.22,8.15,9.55,6.48,12.27,6.48Z" fill="#EA4335"/></svg> Google</button>
+                <button class="social-btn naver"><svg class="naver-icon" height="16" width="16" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="m87.6 0h40.4v128h-40.4z"/><path d="m0 0h40.4v128h-40.4z"/><path d="m0 0h128v128h-128z"/><path d="m44 40.2h40.4v48.4h-40.4z"/><path d="m64.2 40.2-20.2 24.6v23.8h40.4v-23.8z"/></svg> Naver</button>
+                <button class="social-btn kakao"><svg class="kakao-icon" height="20" width="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.56 5.76 8.48l-1.84 6.8 7.2-3.76c.48 0.08 1.04 0.08 1.52 0.08 6.96 0 12.64-4.48 12.64-10.08s-5.68-10.08-12.64-10.08z"/></svg> Kakao</button>
+            </div>
+            <form>
+                <div class="input-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="email@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" placeholder="8자 이상 입력해주세요" required>
+                </div>
+                <button type="submit" class="modal-cta-button">가입하기</button>
+            </form>
+            <p class="modal-footer-text">이미 계정이 있으신가요? <a href="#">로그인</a></p>
+        </div>
+    </div>
+    
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

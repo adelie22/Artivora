@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artify 회원가입</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Panel: Subscription Info -->
+        <div class="info-panel">
+            <div class="info-content">
+                <a href="index.html" class="logo">Artify</a>
+                <h1>당신의 창의력에<br>날개를 달아보세요.</h1>
+                <p>가장 합리적인 가격으로, 무한한 영감을 얻으세요.</p>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Starter Plan</h3>
+                        <p class="price">₩4,900<span>/월</span></p>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 매월 <strong>100 크레딧</strong> 제공</li>
+                        <li><i class="fas fa-check-circle"></i> 음악 & 이미지 다운로드</li>
+                        <li><i class="fas fa-check-circle"></i> 모든 상업적 이용 가능</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card pro">
+                     <div class="popular-badge">BEST</div>
+                    <div class="plan-header">
+                        <h3>Pro Plan</h3>
+                        <p class="price">₩9,900<span>/월</span></p>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 매월 <strong>300 크레딧</strong> 제공</li>
+                        <li><i class="fas fa-check-circle"></i> 음악 & 이미지 다운로드</li>
+                        <li><i class="fas fa-check-circle"></i> 모든 상업적 이용 가능</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Signup Form -->
+        <div class="signup-panel">
+            <div class="signup-content">
+                <h2>계정 만들기</h2>
+                <p class="subtitle">단 몇 초만에 시작하세요!</p>
+
+                <div class="social-login">
+                    <button class="social-btn facebook">
+                        <svg height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-1.5 C13.67,9,13,9.67,13,10.5V12h3l-0.5,3h-2.5v6.8C18.56,20.87,22,16.84,22,12z" fill="#FFFFFF"/></svg>
+                        Facebook 계정으로 시작
+                    </button>
+                    <button class="social-btn google">
+                        <svg height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56,12.25C22.56,11.42,22.49,10.62,22.35,9.84H12.27V14.4H18.1C17.84,16.02,17.03,17.39,15.82,18.25V21.08H19.8C21.66,19.38,22.56,16.25,22.56,12.25Z" fill="#4285F4"/><path d="M12.27,24C15.3,24,17.84,22.96,19.8,21.08L15.82,18.25C14.7,18.96,13.58,19.35,12.27,19.35C9.55,19.35,7.22,17.59,6.35,15.1H2.24V17.94C4.18,21.63,7.89,24,12.27,24Z" fill="#34A853"/><path d="M6.35,15.1C6.13,14.4,6,13.65,6,12.87C6,12.09,6.13,11.34,6.35,10.63V7.79H2.24C1.46,9.24,1,10.99,1,12.87C1,14.75,1.46,16.5,2.24,17.94L6.35,15.1Z" fill="#FBBC05"/><path d="M12.27,6.48C13.74,6.48,15.03,7,15.91,7.82L19.89,3.94C17.84,2.1,15.3,1,12.27,1C7.89,1,4.18,3.37,2.24,7.79L6.35,10.63C7.22,8.15,9.55,6.48,12.27,6.48Z" fill="#EA4335"/></svg>
+                        Google 계정으로 시작
+                    </button>
+                    <button class="social-btn naver">
+                        <svg class="naver-icon" height="16" width="16" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="m87.6 0h40.4v128h-40.4z"/><path d="m0 0h40.4v128h-40.4z"/><path d="m0 0h128v128h-128z"/><path d="m44 40.2h40.4v48.4h-40.4z"/><path d="m64.2 40.2-20.2 24.6v23.8h40.4v-23.8z"/></svg>
+                        네이버 계정으로 시작
+                    </button>
+                    <button class="social-btn kakao">
+                        <svg class="kakao-icon" height="20" width="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.56 5.76 8.48l-1.84 6.8 7.2-3.76c.48 0.08 1.04 0.08 1.52 0.08 6.96 0 12.64-4.48 12.64-10.08s-5.68-10.08-12.64-10.08z"/></svg>
+                        카카오 계정으로 시작
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>또는 이메일로 가입</span>
+                </div>
+
+                <form>
+                    <div class="input-group">
+                        <label for="email">이메일 주소</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="8자 이상 입력해주세요" required>
+                    </div>
+                    <button type="submit" class="cta-button">계정 만들기</button>
+                </form>
+
+                <p class="terms">계정을 만드시면, Artify의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 동의하는 것으로 간주됩니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
