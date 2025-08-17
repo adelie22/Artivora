@@ -213,9 +213,10 @@ facebookLoginBtn.addEventListener('click', () => handleSocialLogin(new FacebookA
 
 // Naver Login (Popup Method)
 naverLoginBtn.addEventListener('click', () => {
-    const NAVER_CLIENT_ID = "ia8iVvOxZs4cLLzl5wUc"; // Your Naver Client ID
-    const REDIRECT_URI = `${window.location.origin}/naver_callback.html`;
-    const state = "RANDOM_STATE"; // Should be a random string for security
+    const REDIRECT_URI = `${window.location.origin}/naver_callback.html`; 
+    const NAVER_CLIENT_ID = "W4LjGnJ_ulte2VAy_pIu"; // Your Naver Client ID
+    const state = "RANDOM_STATE"; // 보안을 위해 실제로는 랜덤 문자열을 생성해야 합니다.
+    
     const url = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${NAVER_CLIENT_ID}&redirect_uri=${REDIRECT_URI}&state=${state}`;
     
     window.open(url, "naverloginpop", "titlebar=1, resizable=1, scrollbars=yes, width=600, height=700");
@@ -227,15 +228,16 @@ window.addEventListener("message", (event) => {
         return;
     }
 
-    if (event.data === 'naver-login-success') {
-        // The onAuthStateChanged observer will handle the UI update
+    const { status, message } = event.data;
+
+    if (status === 'success') {
+        // onAuthStateChanged가 UI를 자동으로 업데이트합니다.
         alert('네이버 로그인에 성공했습니다!');
         modalOverlay.classList.remove('active');
-    } else if (event.data === 'naver-login-error') {
-        alert('네이버 로그인 중 오류가 발생했습니다.');
+    } else if (status === 'error') {
+        alert(`네이버 로그인 중 오류가 발생했습니다: ${message}`);
     }
 }, false);
-
 
 kakaoLoginBtn.addEventListener('click', () => {
     alert('카카오 로그인은 현재 준비 중입니다. (백엔드 연동 필요)');
