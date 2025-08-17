@@ -1,4 +1,5 @@
 // Import functions from the Firebase SDK
+import { firebaseConfig } from './firebase-config.js';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { 
     getAuth, 
@@ -19,17 +20,6 @@ import {
     enableIndexedDbPersistence
 } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-functions.js";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyAlTLBVjuX2ZCNc0YpledcsJrIKXtQYYHI",
-    authDomain: "artivora-90c86.firebaseapp.com",
-    projectId: "artivora-90c86",
-    storageBucket: "artivora-90c86.firebasestorage.app",
-    messagingSenderId: "24756185840",
-    appId: "1:24756185840:web:22a38e71fcd77864e83035",
-    measurementId: "G-Y7XW70D54E"
-};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
