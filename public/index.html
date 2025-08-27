@@ -7,6 +7,7 @@
     <!-- Font Awesome for play/pause icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
 </head>
 <body>
     <aside class="sidebar">
@@ -92,22 +93,10 @@
                         <h2>당신의 컨텐츠에 생기를 불어넣어 줄 음악</h2>
                     </div>
                     <div class="item-grid">
-                        <!-- Music Card 1-6 -->
-                        <div class="music-card">
-                            <div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>自分らしく (나답게)</h3><p>J-Pop</p></div></div>
-                            <div class="waveform-container"><canvas class="waveform"></canvas></div>
-                            <div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div>
-                            <audio crossOrigin="anonymous" src="asset/music/123.wav"></audio>
                         </div>
-                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Epic Cinematic</h3><p>Orchestral</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
-                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Summer Groove</h3><p>Pop / Funk</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
-                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Night Rider</h3><p>Synthwave</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
-                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Acoustic Peace</h3><p>Folk / Acoustic</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
-                        <div class="music-card"><div class="card-content"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-info"><h3>Future Beats</h3><p>Electronic</p></div></div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="time-container"><span class="current-time">0:00</span><span class="total-time">0:00</span></div><audio crossOrigin="anonymous" src=""></audio></div>
-                    </div>
                 </section>
 
-                <section id="photos" class="featured-section featured-photos">
+                <section id="photos" class="featuredㅍ-section featured-photos">
                      <div class="section-title-container">
                         <h2>당신의 컨텐츠를 더 아름답게 해줄 이미지</h2>
                     </div>
@@ -128,9 +117,7 @@
                     <div class="filter-group"><button class="filter-btn right-align"><i class="fas fa-sliders-h"></i> Filters</button></div>
                 </div>
                 <div class="music-track-list">
-                    <div class="track-item"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-album-art"><img src="https://via.placeholder.com/60/00a8ff/ffffff?text=A" alt="album art"></div><div class="track-details"><h3>自分らしく (나답게)</h3><p>Artify Originals</p></div><div class="track-tags"><span>J-Pop</span></div><div class="track-duration">3:15</div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="track-actions"><button class="action-btn" title="Download"><i class="fas fa-download"></i></button><button class="action-btn" title="Favorite"><i class="far fa-star"></i></button><button class="action-btn" title="Find Similar"><i class="fas fa-wand-magic-sparkles"></i></button><button class="action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button></div><audio crossOrigin="anonymous" src="asset/music/123.wav"></audio></div>
-                    <div class="track-item"><div class="play-button"><i class="fas fa-play"></i></div><div class="track-album-art"><img src="https://via.placeholder.com/60/e74c3c/ffffff?text=B" alt="album art"></div><div class="track-details"><h3>Cosmic Groove</h3><p>FASSounds</p></div><div class="track-tags"><span>Pop</span><span>Electronic</span></div><div class="track-duration">2:21</div><div class="waveform-container"><canvas class="waveform"></canvas></div><div class="track-actions"><button class="action-btn"><i class="fas fa-download"></i></button><button class="action-btn"><i class="far fa-star"></i></button><button class="action-btn"><i class="fas fa-wand-magic-sparkles"></i></button><button class="action-btn"><i class="fas fa-ellipsis-v"></i></button></div><audio crossOrigin="anonymous" src=""></audio></div>
-                </div>
+                    </div>
             </section>
 
             <!-- Photos Browser Section (Hidden by default) -->

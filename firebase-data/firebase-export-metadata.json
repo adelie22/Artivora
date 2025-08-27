@@ -1,0 +1,11 @@
+{
+  "version": "14.12.1",
+  "auth": {
+    "version": "14.12.1",
+    "path": "auth_export"
+  },
+  "storage": {
+    "version": "14.12.1",
+    "path": "storage_export"
+  }
+}
